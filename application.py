@@ -1,4 +1,4 @@
-from flask import Flask, request, jasonify, render_template
+from flask import Flask, request, render_template
 import pickle
 from sklearn.preprocessing import StandardScaler
 
@@ -28,7 +28,7 @@ def predict():
         output=model.predict(data)
         return render_template('index.html', prediction_text="The person is diabetic" if output[0]==1 else "The person is not diabetic")
     else:
-        return render_template('home.html')
+        return render_template('index.html')
 
 if __name__=="__main__":
     app.run(host="0.0.0.0")
