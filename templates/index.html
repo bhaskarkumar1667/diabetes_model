@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enter Patient Data</title>
-    <!-- Flask only (This will look broken in VS Code previewers) -->
+   
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -54,13 +54,13 @@
                 {{ prediction_text }}
             </div>
 
-            <!-- Client-side handler to apply custom dark glowing status colors instantly -->
+           
             <script>
                 (function() {
                     const box = document.getElementById('output-diagnostic-box');
                     if (box) {
                         const content = box.textContent || box.innerText;
-                        // Seamlessly reads your unmodified Python return values
+                        
                         if (content.includes("not diabetic")) {
                             box.classList.add('safe');
                         } else {
